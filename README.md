@@ -38,7 +38,7 @@ Gummy lib for Android allows you to easily add a gummy behaviour on any view. Th
 
 ## Result
 ___
-//![pullclick](https://bitbucket.org/repo/rpKXzRX/images/2708637862-pullclick.gif)
+![pullclick](https://github.com/hulab/gummy/blob/master/resources/pullclick.gif)
 ___
 
 **Have fun!**
