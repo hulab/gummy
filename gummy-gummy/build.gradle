@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 25
@@ -18,7 +20,51 @@ android {
     }
 }
 
+ext {
+    bintrayRepo = 'Gummy'
+    bintrayName = 'gummy'
+
+    publishedGroupId = 'com.hulab.android'
+    libraryName = 'Gummy'
+    artifact = 'gummy'
+
+    libraryDescription = 'Gummy lib for Android allows you to easily add a gummy behavior on any view. The gummy behavior gives you a chance to have different actions on pull event and click event. The pull animation is fully managed and highly customizable.'
+
+    siteUrl = 'https://github.com/hulab/gummy'
+    gitUrl = 'https://github.com/hulab/gummy'
+    vcsUrl = 'https://github.com/hulab/gummy.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'nebneb'
+    developerName = 'Pierre-Emmanuel Altieri'
+    developerEmail = 'pe.altieri@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
+    user = project.hasProperty('bintray.user') ? project.property('bintray.user') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintray.apikey') ? project.property('bintray.apikey') : System.getenv('BINTRAY_API_KEY')
+    // jFrog plugin must be declared for this line to work
+    configurations = ['archives']
+    // Package info for BinTray
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            group "com.hulab.android"
+            artifactId "gummy"
+            version "1.0.0"
+        }
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:25.3.1'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
