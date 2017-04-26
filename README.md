@@ -6,6 +6,17 @@ Gummy lib for Android allows you to easily add a gummy behaviour on any view. Th
 
 * Android SDK 15+
 
+# Installation
+```groovy
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.hulab.android:gummy:1.0.0'
+}
+```
+
 # Usage
 
 ```java

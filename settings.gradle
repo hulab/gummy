@@ -1,1 +1,1 @@
-include ':app', ':gummy-gummy'
+include ':app', ':gummy'

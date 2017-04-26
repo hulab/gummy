@@ -20,6 +20,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':gummy-gummy')
+    compile project(path: ':gummy')
     compile 'com.android.support:design:25.3.1'
 }
