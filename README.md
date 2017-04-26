@@ -1,4 +1,5 @@
 # Android Gummy
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [ ![Download](https://api.bintray.com/packages/nebneb/Gummy/gummy/images/download.svg) ](https://bintray.com/nebneb/Gummy/gummy/_latestVersion)
 
 Gummy lib for Android allows you to easily add a gummy behaviour on any view. The gummy behaviour gives you a chance to have different actions on pull event and click event. The pull animation is fully managed and highly customisable.
 
